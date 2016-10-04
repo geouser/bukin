@@ -1,3 +1,70 @@
 .offer {
-    height: 800px;
+    padding: 0 0 35px;
+    .wrapper {
+        @include flex($alignI : center, $wrap: nowrap);
+    }
+    h2 {
+        font: 60px $pnb;
+        margin-bottom: 20px;
+        span {
+            color: $orange;
+            border-bottom: 1px solid $orange;
+        }
+    }
+    &__info {
+        >p {
+            font: 26px/38px $hl;
+        }
+    }
+}
+
+.servicesNav {
+    margin-right: 60px;
+    list-style-type: none;
+    span {
+        display: block;
+        text-align: right;
+        font: 24px $pnb;
+        margin-bottom: 18px;
+        &:after {
+            content: "";
+            display: block;
+            width: 80%;
+            border-bottom: 1px solid rgba(0,0,0, .2);
+            float: right;
+        }
+    }
+    li {
+        position: relative;
+        width: 244px;
+        display: block;
+        background-color: #FFF;
+        border: 2px solid $orange;
+        margin-bottom: 7px;
+        a {
+            line-height: 50px;
+            margin-left: 35px;
+            font: 24px/50px $pnb;
+            color: #000;
+            border-bottom: 1px dashed rgba(0,0,0, .2);
+        }
+
+    }
+}
+
+.weDo {
+    @include flex($alignI : flex-start, $wrap: nowrap);
+    margin-top: 35px;
+    &__item {
+        width: 33%;
+        span {
+            font: 24px/26px $pnb;
+            display: block;
+            margin-bottom: 15px;
+        }
+        p {
+            padding-left: 40px;
+            line-height: 24px;
+        }
+    }
 }

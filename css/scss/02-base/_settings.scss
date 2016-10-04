@@ -5,12 +5,30 @@ html,
 body {
 	height: 100%;
 }
+body {
+    background-color: #F5F5E1;
+    padding-top: 160px;
+    font: 16px $hl;
+}
 
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font: 18px $pn;
+    span {
+        text-transform: none;
+        display: block;
+        font: 26px $pnb;
+    }
+}
+
+section {
+    padding: 60px 0;
+}
 
 // lAYOUT
 // ---------------------------
 .wrapper {
 	width: 1200px;
 	margin: 0 auto;
-	text-align: center;
 }

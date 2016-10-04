@@ -1,0 +1,10 @@
+.serviceSection {
+    h2 {
+        font: 36px/48px $pn;
+        margin-bottom: 80px;
+    }
+}
+
+.sectionHeader {
+    @include flex();
+}

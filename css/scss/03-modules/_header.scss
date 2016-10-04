@@ -1,102 +1,63 @@
          
 .mainHeader {
-    @include position(absolute, 0, auto, auto, 0);
+    @include position(fixed, 0, auto, auto, 0);
     width: 100%;
     z-index: 100;
-    background: #fff;
     margin: 0;
     @include transition(all, .4s);
-    
-        /*.................media.............*/
-        @include m800 {
-            @include position(fixed, 0, auto, auto, -100%);
-            width: 260px !important;
-            height: 100%;
-            text-align: center;
-            background-color: #fff;
-            margin-top: 0;
-            padding: 20px 0;
-            z-index: 100;
-            overflow: scroll;
-             
-            &.active { left: 0;}
-            .wrapper {
-                display: block;
-            }
-        }
-        /*.............end media..............*/
+    background-color: #F5F5E1;
+    padding-top: 45px;
+    .wrapper {
+        @include flex();
+    }
+
 }
 
 
 /* ------------------------------------ */
 /*  NAV STYLES  */
 .mainNav {
+    text-align: right;
     ul {
         list-style-type: none;
-        a {
+        display: inline-block;
+        vertical-align: middle;
+        li {
             display: inline-block;
-            margin: 0 20px;
-            text-decoration: none;
-            @include transition(all, .2s);             
-            &:hover {}
-        }
-
-            /*.................media.............*/
-            @include m800 { 
-                display: block;
-                position: relative;
-                li a  {   
-                    margin: 0 0 25px 0;
-                    &.active {color: #ECCC1D;}
-                    &:hover  {background: transparent;}
-                } 
+            a {
+                font: 16px $pn;
+                text-transform: uppercase;
+                margin: 0 30px;
+                color: #000;
+                display: inline-block;
+                border-bottom: 1px solid rgba(0,0,0,.2);
             }
-            /*.............end media.............*/
+        }
+    }
+    .languages {
+        display: block;
+        list-style-type: none;
+        margin-top: 20px;
+        li {
+            display: inline-block;
+            line-height: 20px;
+            padding: 0 4px;
+            border: 1px solid transparent;
+            margin: 0 4px;
+             font: 16px $pn;
+            color: $orange;
+            &.active {
+                border: 1px solid $orange;
+                color: #000;
+            }
+        }
     }
 }
 
-
-
-
-/* ------------------------------------ */
-/*  MENU BUTTON  */
-
-.menu-button     {    
-    display: none;
-    width: 50px;
-    height: 50px;
-    @include position(fixed, 15px, 15px, auto, auto);
-    margin: auto; 
-    cursor: pointer;
-    z-index: 100;
-    background-color: salmon;
-    border: none;
-    -webkit-border-radius: 4px;
-            border-radius: 4px;
-    .menu-line {
-        display: block;
-        @include position(absolute, auto, 0, auto, 0);
-        width: 60%;
-        height: 5px;
-        background-color: #fff;
-        -webkit-border-radius: 1px;
-        border-radius: 1px;
-        @include transition(all, .4s);
-    }
-
-    .top_line              {   top: 12px;  margin: auto;}
-    .middle_line           {   top: 22px;  margin: auto;}
-    .bottom_line           {   bottom: 12px; margin: auto;}
-
-    &.active               {   -webkit-border-radius: 6px; border-radius: 6px;}
-    &.active .top_line     {   @include transform(rotate(45deg)); top: 45%;}
-    &.active .bottom_line  {   @include transform(rotate(-45deg)); bottom: 45%;}
-    &.active .middle_line  {   width: 0; left: 50%;}
-
-        /*.................media.............*/
-        @include m800 {
-            display: block;
-        }
-        /*..............end media.............*/
-
+.mail {
+    font: 16px $pn;
+    margin: 0 0 0 30px;
+    color: #000;
+    display: inline-block;
+    border-bottom: 1px solid rgba(0,0,0,.2);
 }
